@@ -1,0 +1,31 @@
+#this program covers the details of the seaborn library and its usage with practical implementations
+
+
+import numpy as np
+import matplotlib.pyplot as plt 
+import pandas as pd
+import seaborn as sns
+import sklearn as skl
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.metrics import confusion_matrix, r2_score, mean_squared_error,regression
+from sklearn.linear_model import LinearRegression
+
+# from sklearn.model_selction import 
+
+myData = pd.read_csv("Housing-largeDataset.csv", index_col = False)
+# myData = myData
+
+# Analysing the data
+
+print (myData.head())
+# print(myData.describe)
+print(myData.columns)
+
+# finding if there are any missing values in the original delattr
+sns.style('darkgreen')
+
+sns.relplot(data =  myData, x= 'price', y='lotsize')
+
+
+print("\n----End---")
